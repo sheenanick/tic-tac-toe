@@ -20,7 +20,6 @@ function Board(){
   this.spaceArray.push(new Space(1, 1, "space7"));
   this.spaceArray.push(new Space(2, 1, "space8"));
   this.spaceArray.push(new Space(3, 1, "space9"));
-  console.log(this);
 }
 
 Board.prototype.findById = function(id){
@@ -46,6 +45,14 @@ Game.prototype.changePlayer = function() {
   }
 }
 
+Game.prototype.gameOver = function() {
+  if(this.board.spaceArray[0].markedBy === "X" && this.board.spaceArray[1].markedBy === "X" && this.board.spaceArray[2].markedBy === "X" || this.board.spaceArray[3].markedBy === "X" && this.board.spaceArray[4].markedBy === "X" && this.board.spaceArray[5].markedBy === "X" || this.board.spaceArray[6].markedBy === "X" && this.board.spaceArray[7].markedBy === "X" && this.board.spaceArray[8].markedBy === "X" || this.board.spaceArray[0].markedBy === "X" && this.board.spaceArray[3].markedBy === "X" && this.board.spaceArray[6].markedBy === "X" || this.board.spaceArray[1].markedBy === "X" && this.board.spaceArray[4].markedBy === "X" && this.board.spaceArray[7].markedBy === "X" || this.board.spaceArray[2].markedBy === "X" && this.board.spaceArray[5].markedBy === "X" && this.board.spaceArray[8].markedBy === "X" || this.board.spaceArray[0].markedBy === "X" && this.board.spaceArray[4].markedBy === "X" && this.board.spaceArray[8].markedBy === "X" || this.board.spaceArray[2].markedBy === "X" && this.board.spaceArray[4].markedBy === "X" && this.board.spaceArray[6].markedBy === "X"){
+    alert("Player 1 wins!")
+  } else if(this.board.spaceArray[0].markedBy === "O" && this.board.spaceArray[1].markedBy === "O" && this.board.spaceArray[2].markedBy === "O" || this.board.spaceArray[3].markedBy === "O" && this.board.spaceArray[4].markedBy === "O" && this.board.spaceArray[5].markedBy === "O" || this.board.spaceArray[6].markedBy === "O" && this.board.spaceArray[7].markedBy === "O" && this.board.spaceArray[8].markedBy === "O" || this.board.spaceArray[0].markedBy === "O" && this.board.spaceArray[3].markedBy === "O" && this.board.spaceArray[6].markedBy === "O" || this.board.spaceArray[1].markedBy === "O" && this.board.spaceArray[4].markedBy === "O" && this.board.spaceArray[7].markedBy === "O" || this.board.spaceArray[2].markedBy === "O" && this.board.spaceArray[5].markedBy === "O" && this.board.spaceArray[8].markedBy === "O" || this.board.spaceArray[0].markedBy === "O" && this.board.spaceArray[4].markedBy === "O" && this.board.spaceArray[8].markedBy === "O" || this.board.spaceArray[2].markedBy === "O" && this.board.spaceArray[4].markedBy === "O" && this.board.spaceArray[6].markedBy === "O"){
+    alert("Player 2 wins!")
+  }
+}
+
 $(document).ready(function() {
   var game = new Game();
   console.log(game);
@@ -61,6 +68,7 @@ $(document).ready(function() {
     } else {
       alert("You can't click here");
     }
+    game.gameOver();
   });
 
 
