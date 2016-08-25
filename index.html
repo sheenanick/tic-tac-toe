@@ -10,6 +10,21 @@
   <body>
     <div class="container">
       <h1>Tic Tac Toe</h1>
+      <div id="select-opponent" class="form-group">
+        <h3>Select your opponent</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="computer" value="0">
+            Player 2
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="computer" value="1">
+            Computer
+          </label>
+        </div>
+      </div>
       <div class="board">
         <div class="row row-border">
           <div class="col-xs-4 col spot" id="space1">
@@ -36,6 +51,7 @@
           </div>
         </div>
       </div>
+      <button class="btn btn-success" type="button" id="reset">New Game</button>
     </div>
   </body>
 </html>

@@ -2,10 +2,18 @@ h1 {
   text-align: center;
   padding-bottom: 20px;
 }
+
+button {
+  display: block;
+  margin: 30px auto;
+}
+
 .col-xs-4 {
   height: 150px;
   width: 33%;
-
+  font-size: 130px;
+  text-align: center;
+  padding: 10px;
 }
 
 .col {
@@ -20,4 +28,14 @@ h1 {
   position: relative;
   margin-left: 50%;
   left: -25%;
+}
+
+#reset {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .col-xs-4 {
+    font-size: 80px;
+  }
 }
