@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.col-xs-4 {
+  height: 150px;
+  width: 33%;
+
+}
+
+.col {
+  border-right: 4px solid black;
+}
+
+.row-border {
+  border-bottom: 4px solid black;
+}
+
+.board {
+  position: relative;
+  margin-left: 50%;
+  left: -25%;
+}
